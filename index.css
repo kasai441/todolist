@@ -1,0 +1,10 @@
+#app {
+  display: flex;
+}
+.list-todo {
+  width: 40%;
+}
+.edit-todo {
+  width: 60%;
+  padding: 2em;
+}

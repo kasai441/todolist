@@ -1,0 +1,28 @@
+<h2>Todos</h2>
+<div id="app">
+  <div class="list_todo">
+    <div v-for="(todo, key) in todos">
+        <p>
+            <span class="todo">- {{ todo }}</span>
+            <button @click="editTodo(key)">Edit</button>
+        </p>
+    </div>  
+    <p>
+        <input v-model="newTodo">
+        <button @click="addTodo">Add Todo</button>
+    </p>  
+  </div>
+  <div class="edit_todo">
+    <div v-if="editTodoValue">
+        <h3>Edit</h3>
+        <p class="todo">{{ editTodoValue }}</p>
+        <input v-model="editValue" value="editTodoValue">
+        <button @click="updateTodo(editTodoKey)">Update</button>
+        <button @click="removeTodo(editTodoKey)">Remove</button>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<link rel="stylesheet" href="index.css">
+<script src="index.js"></script>
